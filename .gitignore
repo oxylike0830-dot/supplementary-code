@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env/
+
+# Data/outputs
+data/*
+!data/sample/
+!data/sample/**/*
+
+outputs/
+figures/
+
+# Jupyter
+.ipynb_checkpoints/

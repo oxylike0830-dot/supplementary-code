@@ -1,0 +1,4 @@
+# Enable Git LFS only if you really need it (uncomment formats you plan to track)
+# *.nii.gz filter=lfs diff=lfs merge=lfs -text
+# *.tif     filter=lfs diff=lfs merge=lfs -text
+# *.zst     filter=lfs diff=lfs merge=lfs -text
