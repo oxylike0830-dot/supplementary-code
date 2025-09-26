@@ -1,4 +1,4 @@
-# pymethods – Coronary Artery Reconstruction Tools
+# Coronary Artery Reconstruction Tools
 
 This code is based on the method described in:
 
@@ -50,4 +50,11 @@ Contours were overlaid on grayscale OCT frames (as blue lines), matching the sam
 - Custom macros and Python scripts were used to generate final hemodynamic heatmaps. (heatmap.ipynb)
 
 
+### Python Version
+This project requires Python 3.11.10.
 
+### Installation
+
+To install the required dependencies, run:
+
+pip install -r requirements.txt
