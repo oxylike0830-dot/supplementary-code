@@ -47,7 +47,7 @@ Contours were overlaid on grayscale OCT frames (as blue lines), matching the sam
 - For each patient, `test_1_supplement.ipynb` was run individually to generate STL models and coordinate datasets.
 - The STL files were imported into **ANSYS Fluent** for computational fluid dynamics (CFD) simulations.
 - CFD results were exported as **EnSight Gold** format and visualized using **ParaView**.
-- Custom macros and Python scripts were used to generate final hemodynamic heatmaps. 'heatmap.ipynb'
+- Custom macros and Python scripts were used to generate final hemodynamic heatmaps. `heatmap.ipynb`
 
 
 ### Python Version
