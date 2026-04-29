@@ -1,5 +1,7 @@
 name: paper-supp
-channels: [conda-forge, defaults]
+channels:
+  - conda-forge
+  - defaults
 dependencies:
   - python=3.11
   - numpy=1.26
@@ -8,7 +10,7 @@ dependencies:
   - scipy=1.13
   - pip
   - pip:
-      # If you vendor (copy) pymethods into src/, you don't need this.
-      # Otherwise, pin to your fork + commit SHA:
-      - "pymethods @ git+https://github.com/<YOUR-USERNAME>/pymethods@<COMMIT-SHA>"
       - imageio
+      - pyvista
+      - opencv-python
+      - meshio
