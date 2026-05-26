@@ -62,12 +62,16 @@ class Data:
     @classmethod
     def linesToArray(cls, lines, dtypeMethod=float, delimeter=''):
         nPoints = len(lines)
-        nDimensions = len(lines[0].split(delimeter))
+        if delimeter == '':
+            split_line = lambda line: line.split()
+        else:
+            split_line = lambda line: line.split(delimeter)
+        nDimensions = len(split_line(lines[0]))
         array = np.zeros((nPoints, nDimensions))
 
         for i, line in enumerate(lines):
             array[i] = np.array(
-                line.strip('\n').split(delimeter)
+                split_line(line.strip('\n'))
             ).astype(dtypeMethod)
 
         return array.T
