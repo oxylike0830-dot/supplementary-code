@@ -24,12 +24,12 @@ class Folder:
 
     def __init__(self, path):
         self.folder_path = pt.Path(path)
-        self.image_files = [
+        self.image_files = sorted([
             item for item in self.folder_path.glob('*')
             if all(
                 [not ('npy' in item.suffix), not ('npz' in item.suffix)]
             )
-        ]
+        ])
 
     def save(self, filenmame='parsed_data.npy'):
         np.save(
@@ -68,6 +68,12 @@ class Folder:
         logger.info(
             'Extracting Contours and Landmark Data from Images'
         )
+        if not self.image_files:
+            raise FileNotFoundError(
+                f"No OCT image files were found in {self.folder_path}. "
+                "Check that the notebook is using the repository-relative "
+                "data/sample/OCT path and that the sample images are present."
+            )
         grabber_args = (
             contourColor, contourCheck, landmarkColor, landmarkCheck)
 

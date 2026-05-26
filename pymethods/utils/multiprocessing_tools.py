@@ -30,9 +30,11 @@ def chunk_iterable(
 
     try:
         indexable[0]
-    except ValueError:
+    except (IndexError, TypeError, ValueError):
         indexable = list(indexable)
     len_indexable = len(indexable)
+    if len_indexable == 0:
+        return []
     avg_len = len_indexable // num_chunk
     out = []
     for i in range(num_chunk):
