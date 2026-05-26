@@ -1,4 +1,4 @@
-name: paper-supp
+name: paper-supp-binder
 channels:
   - conda-forge
 dependencies:

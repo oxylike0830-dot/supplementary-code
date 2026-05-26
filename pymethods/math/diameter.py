@@ -2,7 +2,7 @@ from ..math import area, mean
 import numpy as np
 
 
-def area_assumed_diameter(contour: np.array) -> np.float:
+def area_assumed_diameter(contour: np.array) -> float:
     """area_assumed_diameter
 
     calculate the area assumed diameter
@@ -18,7 +18,7 @@ def area_assumed_diameter(contour: np.array) -> np.float:
     return d
 
 
-def all_diameters(contour: np.array) -> np.float:
+def all_diameters(contour: np.array) -> float:
     """all_diameters
 
     for a contour in 2d calculate all the diameters

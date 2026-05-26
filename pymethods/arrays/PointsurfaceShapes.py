@@ -231,7 +231,7 @@ class Ellipsoid(ent.Pointsurface):
         assert b > 0
         assert c > 0
 
-        indices = np.arange(0, n_pts, dtype=np.float) + 0.5
+        indices = np.arange(0, n_pts, dtype=float) + 0.5
         phi = np.arccos(1 - 2 * indices / n_pts)
         theta = np.pi * (1 + 5 ** 0.5) * indices
         xyz = (a * np.cos(theta) * np.sin(phi),
@@ -259,7 +259,7 @@ class Cylinder(ent.Pointsurface):
 
     @classmethod
     def sunflower_spiral(cls, a=1, u=5, n_pts=1000, **kwargs):
-        indices = np.arange(0, n_pts, dtype=np.float)
+        indices = np.arange(0, n_pts, dtype=float)
         z = (indices + 0.5) / n_pts * u
         theta = np.pi * (5 ** 0.5 - 1) * indices
         x = a * np.cos(theta)
@@ -296,7 +296,7 @@ class Cylinder(ent.Pointsurface):
 class Torus(ent.Pointsurface):
     @classmethod
     def sunflower_spiral(cls, a=1, c=5, n_pts=1000, **kwargs):
-        indices = np.arange(0, n_pts, dtype=np.float) + 0.5
+        indices = np.arange(0, n_pts, dtype=float) + 0.5
         phi = (indices + 0.5) / n_pts * 2 * np.pi
         theta = np.pi * (5 ** 0.5 - 1) * indices
 

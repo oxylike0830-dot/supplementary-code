@@ -16,14 +16,14 @@ class Angle(np.ndarray):
     units = utils.LockedDescriptor('_units')
     __slots__ = ['_units']
 
-    def __new__(cls, value: np.float, units='degrees', **kwargs) -> object:
+    def __new__(cls, value: float, units='degrees', **kwargs) -> object:
         """
         """
         out = np.asarray(value).view(cls)
         out._units = units
         return out
 
-    def __init__(self, value: np.float, units='radians', **kwargs) -> None:
+    def __init__(self, value: float, units='radians', **kwargs) -> None:
         """
         """
         if _in_radians(units):
@@ -84,7 +84,7 @@ def _decorate_comparison_method(method):
     @wraps(method)
     def wrapper(*args, **kwargs):
         output = method(*args, **kwargs)
-        return np.bool(output)
+        return bool(output)
     return wrapper
 
 for method in utils.comparison_methods:

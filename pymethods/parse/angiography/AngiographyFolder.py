@@ -1,12 +1,7 @@
 import pathlib as pt
-try:
-    from pymethods.parse.angiography import Data
-    from pymethods.arrays import Curve, FlatContour
-    from pymethods import math
-except ImportError:
-    from .angiography import Data
-    from ...arrays import Curve, FlatContour
-    from ... import math
+from .AngiographyData import Data
+from ...arrays import Curve, FlatContour
+from ... import math
 from abc import abstractmethod
 import numpy as np
 import os

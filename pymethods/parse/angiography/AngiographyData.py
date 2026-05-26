@@ -60,7 +60,7 @@ class Data:
         delattr(self, 'lines')
 
     @classmethod
-    def linesToArray(cls, lines, dtypeMethod=np.float, delimeter=''):
+    def linesToArray(cls, lines, dtypeMethod=float, delimeter=''):
         nPoints = len(lines)
         nDimensions = len(lines[0].split(delimeter))
         array = np.zeros((nPoints, nDimensions))

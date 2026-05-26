@@ -70,7 +70,7 @@ class Vector(np.ndarray):
             logging.info("dimensions are greater than 3 cannot convert to 3d")
         return self
 
-    def rotation_matrix(self, phi: np.float, units='radians') -> np.ndarray:
+    def rotation_matrix(self, phi: float, units='radians') -> np.ndarray:
         """rotation_matrix
         """
         phi = Angle(phi, units=units).rad
@@ -91,7 +91,7 @@ class Vector(np.ndarray):
 
     def rotate_around_vector(
             self, vector: np.ndarray,
-            phi: np.float, units='radians') -> np.ndarray:
+            phi: float, units='radians') -> np.ndarray:
         """
         """
         phi = Angle(phi, units=units).rad
@@ -141,7 +141,7 @@ class Vector(np.ndarray):
         """
         return self.scalar_project(basis)
 
-    def dot(self, basis: np.ndarray) -> Union[np.ndarray, np.float]:
+    def dot(self, basis: np.ndarray) -> Union[np.ndarray, float]:
         return math.dot(self, basis)
 
     def cross(self, vector: np.ndarray) -> np.ndarray:
@@ -156,7 +156,7 @@ class Vector(np.ndarray):
 
     def directed_angle(
             self, vector: np.ndarray,
-            direction: np.ndarray) -> Union[np.ndarray, np.float]:
+            direction: np.ndarray) -> Union[np.ndarray, float]:
         """
         """
         return Angle(math.directed_angle(self, vector, direction))

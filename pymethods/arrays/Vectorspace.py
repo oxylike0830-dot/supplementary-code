@@ -27,7 +27,7 @@ class Vectorspace(Basis):
         return math.approximate_normal(self)
 
     def least_squares_fitting_of_two_point_sets(
-            self, vectorspace: np.ndarray) -> Union[np.ndarray, np.float]:
+            self, vectorspace: np.ndarray) -> Union[np.ndarray, float]:
         R, t = math.least_squares_fitting_of_two_point_sets(self, vectorspace)
         return R, t
 
